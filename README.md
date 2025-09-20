@@ -35,12 +35,12 @@ php artisan db:seed --class=CurrencySeeder
 php artisan exchange:update-rates run
 ```
 
-### Step 6 Build dev environment
+### Step 7 Build dev environment
 ```bash
 npm run dev
 ```
 
-### Step 6 Start the server
+### Step 8 Start the server
 ```bash
 php artisan serve
 ```
