@@ -26,4 +26,17 @@ class Currency extends Model
         return $this->hasMany(Order::class, 'currency_id');
     }
 
+    public static function updateCurrencies($code, $rate)
+    {
+        $currency = self::where('code', $code)->first();
+        
+        if ($currency) {
+            $currency->exchange_rate = $rate;
+            $currency->save();
+            return true;
+        }
+        
+        return false;
+    }
+
 }

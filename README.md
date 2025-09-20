@@ -19,14 +19,20 @@ npm install
 cp .env.example .env
 ```
 
-### Step 4: Run migrations & seeders
+### Step 4: Generate Key
 ```bash
 php artisan key:generate
 ```
 
-### Step 4: Run database migrations
+### Step 5: Run database migrations & seeder
 ```bash
 php artisan migrate
+php artisan db:seed --class=CurrencySeeder
+```
+
+### Step 6 run currency API:
+```bash
+php artisan exchange:update-rates run
 ```
 
 ### Step 6 Build dev environment
