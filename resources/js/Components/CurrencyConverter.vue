@@ -19,7 +19,7 @@
         <div class="form-group surcharge">
             <p>Surcharge: <span>{{ surcharge }}%</span></p>
         </div>
-        <input id="zarAmount" type="number" class="form-control" placeholder="or Enter ZAR Amount"
+        <input type="number" id="zarAmount" class="form-control" placeholder="or Enter ZAR Amount"
             v-model.number="zarAmount" @input="calculateForeign" min="0" />
 
         <button class="btn btn-primary" @click="submitOrder">Place Order</button>

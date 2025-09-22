@@ -11,8 +11,5 @@ Route::get('/', function () {
 
 Route::get('/api/currencies', [CurrencyController::class, 'index']);
 Route::post('/api/orders', [OrderController::class, 'store']);
-Route::get('/api/test', function () {
-    return response()->json(['message' => 'API is working!']);
-});
 
 
