@@ -3,16 +3,15 @@ namespace Tests\Unit;
 
 use App\Http\Controllers\CurrencyController;
 use App\Models\Currency;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class CurrencyControllerTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     public function test_index_returns_all_currencies()
     {
-        Currency::truncate();
         
         Currency::create([
             'name' => 'US Dollar',
